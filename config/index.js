@@ -8,9 +8,10 @@ module.exports = {
   email: '',   // (optional)
   password: '', // (optional)
   // Stack API KEY
-  source_stack: '',             // mandatory
-  access_token: '',
-  management_token: '',    
+  // Don't hard-code credentials: instead, source from environment variables.
+  source_stack: process.env.CONTENTSTACK_STACK_API_KEY,
+  access_token: process.env.CONTENTSTACK_STACK_ACCESS_TOKEN,
+  management_token: process.env.CONTENTSTACK_STACK_MANAGEMENT_TOKEN,
   // Path where the exported data will be stored (relative path)
   data: './contents'
 };
