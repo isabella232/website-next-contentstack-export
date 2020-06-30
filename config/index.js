@@ -13,8 +13,8 @@ if (!process.env.hasOwnProperty('CONTENTSTACK_STACK_API_KEY')) {
   process.exit(1);
 }
 
-if (!process.env.hasOwnProperty('CONTENTSTACK_STACK_ACCESS_TOKEN')) {
-  console.log('Missing Contentstack environment variable: CONTENTSTACK_STACK_ACCESS_TOKEN');
+if (!process.env.hasOwnProperty('CONTENTSTACK_STACK_DELIVERY_TOKEN')) {
+  console.log('Missing Contentstack environment variable: CONTENTSTACK_STACK_DELIVERY_TOKEN');
   process.exit(1);
 }
 
@@ -29,8 +29,10 @@ module.exports = {
   password: process.env.CONTENTSTACK_PASSWORD, // (optional)
   // Stack API KEY
   source_stack: process.env.CONTENTSTACK_STACK_API_KEY,             // mandatory
-  access_token: process.env.CONTENTSTACK_STACK_ACCESS_TOKEN, // (deprecated)
-  management_token: process.env.CONTENTSTACK_STACK_MANAGEMENT_TOKEN,
+  // access_token: process.env.CONTENTSTACK_STACK_DELIVERY_TOKEN, // (deprecated)
+  access_token: process.env.CONTENTSTACK_STACK_DELIVERY_TOKEN,
+  // We're only reading data from ContentStack, so `management_token` is not required
+  // management_token: process.env.CONTENTSTACK_STACK_MANAGEMENT_TOKEN,
   // Path where the exported data will be stored (relative path)
   data: './contents'
 };
