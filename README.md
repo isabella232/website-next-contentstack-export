@@ -14,7 +14,14 @@ npm install
 
 ## Configuration
 
-Update configuration details at config/index.js
+Configuration details in config/index.js are read from these environment variables:
+
+- `CONTENTSTACK_EMAIL`
+- `CONTENTSTACK_PASSWORD`
+- `CONTENTSTACK_STACK_API_KEY`
+- `CONTENTSTACK_STACK_DELIVERY_TOKEN`
+
+As we only need to read from ContentStack, [Delivery Tokens](https://www.contentstack.com/docs/developers/create-tokens/types-of-tokens/#access-tokens) should be used instead of deprecated ([Access Tokens](https://www.contentstack.com/docs/developers/create-tokens/types-of-tokens/#access-tokens))
 
 ```js
 {
@@ -25,7 +32,7 @@ Update configuration details at config/index.js
  email: '', // Your registered email id
  password: '', // Account password
  source_stack: '' // Stack api_key
- access_token: '' // Stack access_token
+ access_token: '' // Stack access_token, deprecated: use Delivery Token instead
  management_token: '' //Stack management_token
  data: '' // Relative path to the directory, where exported data is to be stored. ex: './contents'
  ...
