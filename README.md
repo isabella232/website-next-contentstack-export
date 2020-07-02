@@ -16,8 +16,6 @@ npm install
 
 Configuration details in config/index.js are read from these environment variables:
 
-- `CONTENTSTACK_EMAIL`
-- `CONTENTSTACK_PASSWORD`
 - `CONTENTSTACK_STACK_API_KEY`
 - `CONTENTSTACK_STACK_DELIVERY_TOKEN`
 
