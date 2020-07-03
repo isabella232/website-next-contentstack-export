@@ -22,7 +22,7 @@ module.exports = {
   // access_token: process.env.CONTENTSTACK_STACK_MANAGEMENT_TOKEN, // (deprecated)
   access_token: process.env.CONTENTSTACK_STACK_MANAGEMENT_TOKEN,
   // We're only reading data from ContentStack, so `management_token` is not required
-  // management_token: process.env.CONTENTSTACK_STACK_MANAGEMENT_TOKEN,
+  management_token: process.env.CONTENTSTACK_STACK_MANAGEMENT_TOKEN,
   // Path where the exported data will be stored (relative path)
   data: './contents'
 };
