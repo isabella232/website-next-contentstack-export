@@ -1,11 +1,3 @@
-if (!process.env.hasOwnProperty('CONTENTSTACK_EMAIL')) {
-  console.warn('Missing Contentstack environment variable: CONTENTSTACK_EMAIL. OK if using keys and tokens');
-}
-
-if (!process.env.hasOwnProperty('CONTENTSTACK_PASSWORD')) {
-  console.warn('Missing Contentstack environment variable: CONTENTSTACK_PASSWORD. OK if using keys and tokens');
-}
-
 if (!process.env.hasOwnProperty('CONTENTSTACK_STACK_API_KEY')) {
   console.log('Missing Contentstack environment variable: CONTENTSTACK_STACK_API_KEY');
   process.exit(1);
